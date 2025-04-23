@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Парсер тесту з DOCX</title>
+  <link rel="stylesheet" href="parser.css" />
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+</head>
+<body>
+  <div class="home-link">
+    <a href="index.html">Home</a>
+  </div>
+  <div class="container">
+    <h1>Завантаження тесту з Word-файлу</h1>
+    <p>Завантажте .docx-файл, щоб отримати JSON із тестовими питаннями.</p>
+    <input type="file" id="docxInput" accept=".docx" hidden />
+    <button id="uploadBtn">📄 Завантажити DOCX</button>
+    <pre id="output" class="output"></pre>
+  </div>
+
+  <script src="docx-parser.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* Використання CSS змінних для легшого управління кольорами та відступами */
+:root {
+  --primary-color: #3498db;
+  --primary-dark-color: #2980b9;
+  --background-color: #f4f6f8; /* Узгоджуємо з фоном сторінки тесту */
+  --surface-color: #fff;
+  --text-color: #2e2e2e;
+  --heading-color: #2c3e50;
+  --border-color: #ddd;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.08);
+  --shadow-heavy: rgba(0, 0, 0, 0.1);
+  --spacing-small: 8px;
+  --spacing-medium: 15px;
+  --spacing-large: 20px;
+  --spacing-xlarge: 30px;
+}
+
+/* Загальні стилі для body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Узгоджуємо шрифт */
+  background: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column; /* Встановлюємо напрямок колонкою, щоб посилання було над контейнером */
+  align-items: center;
+  min-height: 100vh; /* Використовуємо min-height для коректного відображення, якщо контенту багато */
+  padding: var(--spacing-large); /* Додаємо невеликий padding для адаптивності */
+  box-sizing: border-box;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стилі для посилання на головну */
+.home-link {
+  width: 100%; /* Щоб посилання займало всю ширину для вирівнювання */
+  max-width: 600px; /* Обмежуємо ширину по контейнеру парсингу */
+  text-align: left; /* Вирівнюємо посилання по лівому краю */
+  margin-bottom: var(--spacing-medium); /* Відступ знизу перед контейнером */
+   /* Додаємо відступ з боків, якщо body має менший padding */
+  padding: 0 var(--spacing-large);
+  box-sizing: border-box;
+}
+
+.home-link a {
+  color: var(--primary-color); /* Колір посилання */
+  text-decoration: none; /* Прибираємо підкреслення */
+  font-size: 1rem; /* Розмір шрифту */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  outline: none; /* Прибираємо стандартний outline */
+}
+
+.home-link a:hover {
+  color: var(--primary-dark-color); /* Зміна кольору при наведенні */
+  text-decoration: underline; /* Додаємо підкреслення при наведенні */
+}
+
+.home-link a:focus {
+  outline: 2px solid var(--primary-color); /* Кастомний outline при фокусі */
+  outline-offset: 2px; /* Відступ від елемента */
+}
+
+
+/* Стилі для основного контейнера */
+.container {
+  background: var(--surface-color);
+  padding: var(--spacing-xlarge); /* Збільшуємо padding для узгодження */
+  border-radius: 16px; /* Узгоджуємо радіус */
+  box-shadow: 0 8px 24px var(--shadow-medium); /* Узгоджуємо тінь */
+  max-width: 600px;
+  width: 100%; /* Використовуємо 100% замість 90% з max-width */
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+   margin-top: 0; /* Прибираємо верхній margin, оскільки його задає home-link */
+}
+
+.container:hover {
+   box-shadow: 0 10px 30px var(--shadow-heavy); /* Ефект при наведенні */
+}
+
+/* Стилі для заголовків в контейнері (якщо є) */
+.container h1,
+.container h2,
+.container h3 {
+  color: var(--heading-color);
+  margin-top: 0;
+  margin-bottom: var(--spacing-large);
+  line-height: 1.3;
+}
+
+.container h1 {
+   font-size: 2rem;
+}
+
+/* Стилі для параграфів в контейнері (якщо є) */
+.container p {
+  margin-bottom: var(--spacing-medium);
+  color: #555;
+}
+
+
+/* Стилі для кнопки завантаження файлу */
+button {
+  padding: 12px 20px; /* Узгоджуємо padding */
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px; /* Узгоджуємо радіус */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s, box-shadow 0.2s ease; /* Додаємо переходи */
+  outline: none;
+  margin-top: var(--spacing-large); /* Відступ зверху після параграфа */
+  margin-bottom: var(--spacing-large); /* Відступ знизу перед output */
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex; /* Вирівнювання іконки та тексту */
+  align-items: center;
+  gap: 8px; /* Відстань між іконкою та текстом */
+}
+
+button:hover:not(:disabled) {
+  background: var(--primary-dark-color);
+  transform: translateY(-1px); /* Легкий рух при наведенні */
+  box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+button:focus {
+   outline: 2px solid var(--primary-color);
+   outline-offset: 3px;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+/* Стилі для прихованого input[type="file"] */
+input[type="file"][hidden] {
+  display: none;
+}
+
+
+/* Стилі для блоку виводу результатів парсингу */
+.output {
+  text-align: left;
+  margin-top: var(--spacing-large); /* Узгоджуємо відступ */
+  background: #eef2f7; /* Трохи світліший фон для контрасту */
+  padding: var(--spacing-medium); /* Узгоджуємо padding */
+  border-radius: 10px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Покращений стек моноширинних шрифтів */
+  font-size: 0.95rem; /* Трохи більший шрифт для читабельності */
+  overflow: auto; /* Дозволяємо прокрутку в обох напрямках, якщо потрібно */
+  max-height: 300px; /* Обмежуємо висоту */
+  border: 1px solid #e0e0e0; /* Легка рамка */
+  color: #333; /* Колір тексту */
+  white-space: pre-wrap; /* Зберігаємо пробіли та переноси */
+  word-wrap: break-word; /* Переносимо довгі слова */
+  box-sizing: border-box; /* Враховуємо padding та border */
+}
+
+/* Стилі для порожнього блоку виводу */
+.output:empty::before {
+  content: 'Результат парсингу буде тут...'; /* Текст-заглушка */
+  color: #999;
+  font-style: italic;
+}
+
+
+/* Медіа запити для адаптивного дизайну */
+@media (max-width: 768px) {
+  body {
+      padding: var(--spacing-medium);
+  }
+
+  .home-link {
+      max-width: calc(100% - 2 * var(--spacing-medium)); /* Коригуємо max-width з урахуванням padding body */
+       padding: 0; /* Прибираємо додатковий padding з боків */
+  }
+
+
+  .container {
+      padding: var(--spacing-large);
+  }
+
+  .container h1 {
+      font-size: 1.8rem;
+  }
+
+  button {
+      font-size: 0.9rem;
+      padding: 10px 18px;
+      gap: 6px;
+  }
+
+  .output {
+      padding: var(--spacing-small);
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: var(--spacing-small);
+  }
+
+   .home-link {
+      max-width: calc(100% - 2 * var(--spacing-small)); /* Коригуємо max-width з урахуванням padding body */
+      padding: 0; /* Прибираємо додатковий padding з боків */
+       margin-bottom: var(--spacing-small);
+  }
+
+
+  .container {
+      padding: var(--spacing-medium);
+  }
+
+   .container h1 {
+      font-size: 1.5rem;
+       margin-bottom: var(--spacing-medium);
+  }
+
+  button {
+      font-size: 0.85rem;
+      padding: 8px 15px;
+      margin-top: var(--spacing-medium);
+      margin-bottom: var(--spacing-medium);
+      gap: 4px;
+  }
+
+  .output {
+      padding: var(--spacing-small);
+      font-size: 0.85rem;
+      margin-top: var(--spacing-medium);
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестування</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="admin-link">
+        <a href="parser.html">Admin</a>
+    </div>
+    <div class="container">
+        <h1>Тестування</h1>
+        <p id="totalQuestionsInfo"></p>
+        <button id="startBtn">Почати тест</button>
+
+        <div id="quizHeader" class="hidden">
+             <div id="timer-controls">
+                 <div id="timer">Час: <span id="time">--:--</span></div>
+                 </div>
+             <div id="progress-container">
+                 <div id="progress-bar"></div>
+             </div>
+             <p id="questionCounter">Питання <span id="currentQuestionNum">0</span> з <span id="totalQuestionsCount">0</span></p>
+        </div>
+        <div id="quizContainer" class="hidden">
+            <div id="questionContainer"></div>
+
+            <div class="quiz-feedback hidden"></div>
+
+            <div class="quiz-navigation">
+                 <button id="prevBtn" class="hidden secondary-button">Попереднє</button> <button id="nextBtn" class="hidden">Наступне</button>
+                 <button id="finishBtn" class="hidden secondary-button">Завершити тест</button>
+            </div>
+        </div>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Результати</h2>
+            <p id="score"></p>
+            <div id="reviewContainer"></div>
+            <button id="restartBtn" class="secondary-button hidden">Спробувати ще раз</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1021 @@
+/* Використання CSS змінних для легшого управління кольорами та відступами */
+:root {
+    --primary-color: #3498db;
+    --primary-light: #dcf1ff; /* Додано світліший primary для selected button */
+    --primary-dark-color: #2980b9;
+    --secondary-color: #e74c3c; /* Колір для "Завершити тест" (наприклад, червоний) */
+    --secondary-dark-color: #c0392b;
+     --progress-color: #2ecc71; /* Зелений для прогрес-бару */
+     --timer-color: #f39c12; /* Помаранчевий для таймера */
+     --timer-warning-color: #e74c3c; /* Червоний для таймера при низькому часі */
+
+    --background-color: #f4f6f8;
+    --surface-color: #fff;
+    --text-color: #2e2e2e;
+    --heading-color: #2c3e50;
+    --border-color: #ddd;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.08);
+    --shadow-heavy: rgba(0, 0, 0, 0.1);
+    --success-color: #4caf50;
+    --success-light: #e8f5e9;
+    --success-dark: #1b5e20;
+    --error-color: #f44336;
+    --error-light: #ffebee;
+    --error-dark: #b71c1c;
+    --warning-color: #ff9800; /* Для пропущених або не вибраних правильних */
+    --warning-light: #fff3e0;
+    --warning-dark: #e65100;
+    --spacing-small: 8px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    --spacing-xlarge: 30px;
+}
+
+/* Загальні стилі для body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: var(--spacing-large);
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility; /* Покращення відображення тексту */
+    -webkit-font-smoothing: antialiased; /* Згладжування шрифтів */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стилі для посилання адміна */
+.admin-link {
+    width: 100%;
+    max-width: 800px;
+    text-align: right;
+    margin-bottom: var(--spacing-medium);
+}
+
+.admin-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    outline: none;
+}
+
+.admin-link a:hover {
+    color: var(--primary-dark-color);
+    text-decoration: underline;
+}
+
+.admin-link a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+/* Стилі для основного контейнера */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: var(--surface-color);
+    padding: var(--spacing-xlarge);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px var(--shadow-medium);
+    margin-top: 0;
+    margin-bottom: var(--spacing-xlarge);
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+     text-align: left; /* За замовчуванням контейнер вирівнює вміст по лівому краю */
+}
+
+.container:hover {
+    box-shadow: 0 10px 30px var(--shadow-heavy);
+}
+
+/* Стилі для заголовків */
+h1,
+h2,
+h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-large);
+    line-height: 1.3;
+     text-align: left; /* Заголовки вирівнюємо по лівому краю */
+}
+
+h1 {
+    text-align: center; /* Головний заголовок все одно можна залишити по центру для візуального акценту */
+    margin-bottom: var(--spacing-xlarge);
+    font-size: 2.5rem;
+}
+
+h2 {
+     font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Стилі для кнопок (загальні) */
+button {
+    border: none;
+    border-radius: 10px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.2s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 12px 20px;
+    color: white;
+     text-align: center; /* Текст на кнопках зазвичай по центру */
+}
+
+/* Стилі для основних кнопок (Почати, Наступне) */
+button:not(.secondary-button) {
+    background-color: var(--primary-color);
+}
+
+button:not(.secondary-button):hover:not(:disabled) {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+button:not(.secondary-button):active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+/* Стилі для вторинних кнопок (Завершити тест, Спробувати ще раз) */
+button.secondary-button {
+    background-color: var(--secondary-color);
+}
+
+button.secondary-button:hover:not(:disabled) {
+    background-color: var(--secondary-dark-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+button.secondary-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+
+button:focus {
+     outline: 2px solid var(--primary-color);
+     outline-offset: 3px;
+}
+
+button.secondary-button:focus {
+     outline: 2px solid var(--secondary-color);
+     outline-offset: 3px;
+}
+
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+#startBtn {
+    display: block;
+    margin: var(--spacing-large) auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    min-width: 150px;
+     text-align: center;
+}
+
+#restartBtn {
+    display: block;
+    margin: var(--spacing-large) auto var(--spacing-medium);
+     background-color: var(--primary-color);
+     text-align: center;
+}
+
+#restartBtn:hover:not(:disabled) {
+    background-color: var(--primary-dark-color);
+}
+#restartBtn:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+
+/* Стилі для контейнера навігаційних кнопок в тесті */
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between; /* Розтягуємо кнопки по краях */
+    align-items: center;
+    margin-top: var(--spacing-large);
+    flex-wrap: wrap; /* Дозволяє кнопкам переноситись на новий рядок */
+    gap: var(--spacing-medium); /* Відстань між кнопками при переносі */
+}
+
+#prevBtn,
+#nextBtn,
+#finishBtn {
+    flex-grow: 1; /* Дозволяє кнопкам займати доступний простір */
+     /* min-width: 150px; -- Можна прибрати або зменшити, якщо flex-grow достатньо */
+    text-align: center;
+    margin: 0; /* Прибираємо стандартні марджини */
+     padding: 12px 20px;
+}
+
+/* Стилі для кнопки Попереднє (як вторинна) */
+#prevBtn {
+     background-color: #ccc; /* Світліший фон */
+     color: #333; /* Темний текст */
+     /* успадковує secondary-button hover/focus/active стилі */
+}
+
+#prevBtn:hover:not(:disabled) {
+     background-color: #bbb;
+     transform: translateY(-1px);
+}
+#prevBtn:active:not(:disabled) {
+     transform: translateY(0);
+}
+#prevBtn:focus {
+     outline: 2px solid #999;
+}
+
+#prevBtn:disabled {
+     background-color: #eee;
+     color: #999;
+     cursor: not-allowed;
+}
+
+
+/* Стилі для інформації про загальну кількість питань */
+#totalQuestionsInfo {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: var(--spacing-large);
+}
+
+/* Стилі для Quiz Header (Таймер та Прогрес) */
+#quizHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-large);
+    padding-bottom: var(--spacing-medium);
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+}
+
+#timer-controls { /* Контейнер для таймера та кнопки паузи */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+}
+
+#timer {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--timer-color);
+    flex-shrink: 0;
+    text-align: left;
+}
+
+#timer.warning {
+    color: var(--timer-warning-color);
+}
+
+
+#progress-container {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+     margin: 0 var(--spacing-medium);
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--progress-color);
+    border-radius: 6px;
+    transition: width 0.4s ease-in-out;
+}
+
+#questionCounter {
+    font-size: 1rem;
+    color: #555;
+    flex-shrink: 0;
+     text-align: right;
+}
+
+
+/* Стилі для контейнера з тестом */
+#quizContainer {
+    margin-top: var(--spacing-large);
+    padding-top: var(--spacing-large);
+    border-top: 1px solid #eee;
+     text-align: left;
+}
+
+/* Стилі для контейнера питання */
+#questionContainer {
+    margin-bottom: var(--spacing-large);
+     text-align: left;
+}
+
+#questionContainer p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-medium);
+    font-weight: bold;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+     text-align: left;
+}
+
+/* Стилі для списків в питаннях, якщо вони є */
+#questionContainer ul,
+#questionContainer ol {
+    margin: var(--spacing-medium) 0;
+    padding-left: 25px;
+     text-align: left;
+}
+
+#questionContainer li {
+    margin-bottom: var(--spacing-small);
+     text-align: left;
+}
+
+
+/* Стилі для міток (лейблів) варіантів відповіді, особливо для multichoice */
+label {
+    display: flex;
+    align-items: flex-start; /* Вирівнюємо елементи по верхньому краю */
+    margin: var(--spacing-small) 0;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #f9f9f9;
+    word-wrap: break-word;
+     text-align: left;
+}
+
+label:hover {
+    background-color: #f0f0f0;
+    border-color: #c0c0c0;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+label:focus-within {
+     outline: 2px solid var(--primary-color);
+     outline-offset: 3px;
+     border-color: var(--primary-color);
+}
+
+/* Стилі для чекбоксів та радіокнопок */
+label input[type="checkbox"],
+label input[type="radio"] {
+    margin-right: var(--spacing-small);
+    flex-shrink: 0;
+    transform: scale(1.2);
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    vertical-align: middle; /* Залишаємо як базове вирівнювання */
+
+    /* Додаткове точне коригування */
+    position: relative;
+    top: -1px; /* Зміщуємо трохи вгору */
+}
+
+
+/* Стилі для кнопок відповідей у single choice */
+button.answerBtn {
+     display: block;
+     width: 100%;
+     margin: var(--spacing-small) 0;
+     padding: var(--spacing-small) var(--spacing-medium);
+     background-color: #f0f0f0;
+     color: var(--text-color);
+     border: 1px solid var(--border-color);
+     text-align: left;
+     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.answerBtn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    border-color: #c0c0c0;
+    transform: none;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+button.answerBtn:active:not(:disabled) {
+    transform: none;
+    box-shadow: none;
+}
+
+button.answerBtn.selected {
+    background-color: var(--primary-light);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Стилі для негайного зворотного зв'язку на кнопках Choice */
+button.answerBtn.correct-answer {
+     background-color: var(--success-light);
+     border-color: var(--success-color);
+     color: var(--success-dark);
+     font-weight: bold;
+}
+
+button.answerBtn.incorrect-answer {
+     background-color: var(--error-light);
+     border-color: var(--error-color);
+     color: var(--error-dark);
+     font-weight: bold;
+}
+/* Якщо правильна відповідь не була вибрана користувачем */
+button.answerBtn.not-selected-correct {
+    background-color: var(--warning-light);
+    border-color: var(--warning-color);
+    border-style: dashed; /* Пунктирна рамка */
+    color: var(--warning-dark);
+    font-style: italic;
+}
+
+
+/* Стилі для текстового поля вводу відповіді */
+.answerInput {
+    width: calc(100% - (2 * var(--spacing-small)));
+    padding: var(--spacing-small);
+    font-size: 1rem;
+    margin: var(--spacing-small) 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+     text-align: left;
+}
+
+.answerInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Стилі для негайного зворотного зв'язку на Input */
+.answerInput.correct-answer-input {
+    border-color: var(--success-color);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.answerInput.incorrect-answer-input {
+    border-color: var(--error-color);
+    box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+
+/* Стилі для випадаючого списку */
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: var(--spacing-small) 0 var(--spacing-large);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4-3.6%203.6-5.4%207.9-5.4%2012.8V200.6c0%205%201.8%209.3%205.4%2012.9%203.6%203.6%207.9%205.3%2012.9%205.3h255.2c5%200%209.3-1.8%2012.9-5.3%203.6-3.6%205.3-7.9%205.3-12.9V82.2c0-5-1.8-9.3-5.3-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-small) top 50%;
+    background-size: 12px auto;
+    padding-right: calc(var(--spacing-small) + 20px);
+     text-align: left;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+/* Стилі для контейнера результатів */
+#resultContainer {
+    margin-top: var(--spacing-large);
+    padding-top: var(--spacing-large);
+    border-top: 1px solid #eee;
+     text-align: left;
+}
+
+#resultContainer h2 {
+    text-align: center;
+    color: var(--heading-color);
+    margin-bottom: var(--spacing-large);
+}
+
+#score {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-xlarge);
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+
+/* Загальні стилі для елементів перегляду відповідей */
+.review-item {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    box-shadow: 0 2px 8px var(--shadow-light);
+     text-align: left;
+}
+
+.review-item h3 {
+    margin-bottom: var(--spacing-small);
+    border-bottom: 1px solid #eee;
+    padding-bottom: var(--spacing-small);
+    color: #333;
+    font-size: 1.3rem;
+     text-align: left;
+}
+
+.review-item p {
+     padding: var(--spacing-small) var(--spacing-medium);
+     margin: var(--spacing-small) 0;
+     border-radius: 6px;
+     border-left: 4px solid transparent;
+     word-wrap: break-word;
+     font-size: 1rem;
+     text-align: left;
+}
+
+/* Стилі для різних статусів відповіді в перегляді результатів */
+.review-item p.correct {
+    background-color: var(--success-light);
+    border-color: var(--success-color);
+    color: var(--success-dark);
+}
+
+.review-item p.incorrect {
+    background-color: var(--error-light);
+    border-color: var(--error-color);
+    color: var(--error-dark);
+}
+
+.review-item p.not-selected-correct {
+    background-color: var(--warning-light);
+    border-color: var(--warning-color);
+    color: var(--warning-dark);
+    border-style: dashed;
+}
+
+.review-item p.skipped {
+    background-color: #f0f0f0;
+    border-color: #999;
+    color: #555;
+    font-style: italic;
+}
+
+
+.review-item p strong {
+    color: #555;
+    font-weight: bold;
+}
+
+
+/* Стилі для загального статусу питання в review */
+.review-item .question-status {
+    margin-top: var(--spacing-medium);
+    padding-top: var(--spacing-small);
+    border-top: 1px dashed #ccc;
+    font-weight: bold;
+    font-size: 1.1rem;
+     text-align: left;
+}
+
+.review-item .question-status.correct {
+    color: var(--success-dark);
+}
+
+.review-item .question-status.incorrect {
+    color: var(--error-dark);
+}
+
+/* --- Стилі для Drag & Drop (Тип 'match') --- */
+.match-container {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-large);
+    text-align: left;
+}
+
+.match-list {
+    list-style: none;
+    padding: var(--spacing-small);
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.match-list.left li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-small);
+    border-radius: 5px;
+    cursor: grab;
+    transition: background-color 0.2s ease;
+    border: 1px solid var(--primary-dark-color);
+    word-wrap: break-word;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.match-list.left li:hover {
+     background-color: var(--primary-dark-color);
+}
+
+.match-list.right li {
+    background-color: #e0e0e0;
+    padding: var(--spacing-small);
+    border-radius: 5px;
+    border: 1px dashed #999;
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрування заглушки */
+    color: #555;
+    font-style: italic;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.match-list.right li.dragover {
+    background-color: #c0e0c0;
+    border-color: var(--success-color);
+}
+
+.is-dragging {
+    opacity: 0.5;
+    border: 2px dashed #000;
+}
+
+.match-list.right li.matched {
+     background-color: var(--success-light);
+     border: 1px solid var(--success-color);
+     color: var(--success-dark);
+     font-style: normal;
+     justify-content: flex-start; /* Вирівнюємо вміст по лівому краю після зіставлення */
+}
+
+.match-list.right li.matched span.dragged-item {
+    font-weight: bold;
+    color: var(--primary-dark-color);
+    margin-right: 5px;
+}
+
+/* Стилі для Review блоку для типу match D&D */
+.review-item .match-pair {
+    padding: var(--spacing-small) var(--spacing-medium);
+    margin: var(--spacing-small) 0;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
+    word-wrap: break-word;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.review-item .match-pair.correct {
+     background-color: var(--success-light);
+     border-color: var(--success-color);
+     color: var(--success-dark);
+}
+
+.review-item .match-pair.incorrect {
+     background-color: var(--error-light);
+     border-color: var(--error-color);
+     color: var(--error-dark);
+}
+
+/* Стилі для інформації про попередній результат на стартовому екрані */
+.previous-result-info {
+    text-align: center;
+    font-size: 1rem; /* Трохи менший шрифт */
+    color: #777; /* Світліший колір */
+    margin-top: var(--spacing-medium); /* Відступ зверху */
+    margin-bottom: var(--spacing-large); /* Відступ знизу */
+}
+
+.previous-result-info strong {
+    color: #555; /* Трохи темніший колір для жирного тексту */
+}
+
+.previous-result-info small {
+     color: #999; /* Ще світліший колір для мітки часу */
+}
+
+
+/* Медіа запити для адаптивного дизайну */
+@media (max-width: 768px) {
+    body {
+        padding: var(--spacing-medium);
+    }
+
+    .container {
+        padding: var(--spacing-large);
+        margin-bottom: var(--spacing-large);
+         text-align: left;
+    }
+
+    .admin-link {
+         margin-bottom: var(--spacing-small);
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-large);
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    h3 {
+         font-size: 1.3rem;
+    }
+
+    #quizHeader {
+         flex-direction: column;
+         align-items: stretch;
+         gap: var(--spacing-small);
+    }
+
+    #timer-controls {
+         justify-content: center;
+         width: 100%;
+    }
+
+     #timer {
+         text-align: center;
+     }
+
+     #progress-container {
+         margin: 0;
+     }
+
+     #questionCounter {
+         text-align: center;
+     }
+
+
+    button {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+
+    #startBtn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+         text-align: center;
+    }
+
+    #restartBtn {
+         text-align: center;
+    }
+
+
+    .quiz-navigation {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+
+    #prevBtn,
+    #nextBtn,
+    #finishBtn {
+         width: 100%;
+         margin: 0;
+         min-width: auto;
+         padding: 10px 18px;
+         text-align: center;
+    }
+
+
+    .answerInput,
+    select {
+        font-size: 0.95rem;
+        padding: var(--spacing-small);
+         text-align: left;
+    }
+
+    label {
+        padding: var(--spacing-small) var(--spacing-medium);
+        margin: var(--spacing-small) 0;
+         font-size: 0.95rem;
+         text-align: left;
+    }
+
+    /* Адаптивні стилі для чекбоксів/радіо */
+    label input[type="checkbox"],
+    label input[type="radio"] {
+         transform: scale(1.1);
+         margin-right: var(--spacing-small);
+         vertical-align: middle;
+         position: relative;
+         top: -1px; /* Зміщуємо трохи вгору */
+    }
+
+    /* Адаптивні стилі для Drag & Drop */
+     .match-container {
+         flex-direction: column;
+         gap: var(--spacing-medium);
+         text-align: left;
+     }
+
+     .match-list {
+         flex: none;
+         width: 100%;
+         text-align: left;
+     }
+
+    .match-list.left li,
+    .match-list.right li {
+         text-align: left;
+         justify-content: flex-start;
+    }
+
+
+    .review-item {
+        padding: var(--spacing-medium);
+        margin-bottom: var(--spacing-medium);
+         text-align: left;
+    }
+
+    .review-item h3,
+    .review-item p,
+    .review-item .match-pair,
+    .review-item .question-status {
+        text-align: left;
+    }
+
+
+    #score {
+        font-size: 1.2rem;
+        margin-bottom: var(--spacing-large);
+         text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: var(--spacing-small);
+    }
+
+    .container {
+        padding: var(--spacing-large);
+        margin-bottom: var(--spacing-medium);
+         text-align: left;
+    }
+
+     .admin-link {
+         margin-bottom: var(--spacing-small);
+    }
+
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-medium);
+    }
+     h3 {
+         font-size: 1.2rem;
+    }
+
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        margin: var(--spacing-small) 3px;
+    }
+
+    #startBtn {
+        padding: 10px 20px;
+        font-size: 1rem;
+         text-align: center;
+    }
+
+     #restartBtn {
+         text-align: center;
+     }
+
+
+     .quiz-navigation {
+        gap: var(--spacing-small);
+    }
+
+    #prevBtn,
+    #nextBtn,
+    #finishBtn {
+         padding: 8px 15px;
+         margin-top: var(--spacing-medium);
+         margin-bottom: var(--spacing-medium);
+         text-align: center;
+    }
+
+
+    .answerInput,
+    select {
+        font-size: 0.9rem;
+        padding: var(--spacing-small);
+         text-align: left;
+    }
+
+     label {
+        padding: var(--spacing-small);
+        margin: var(--spacing-small) 0;
+         font-size: 0.9rem;
+         text-align: left;
+    }
+
+    /* Адаптивні стилі для чекбоксів/радіо */
+    label input[type="checkbox"],
+    label input[type="radio"] {
+         transform: scale(1); /* На малих екранах зменшуємо масштаб */
+         margin-right: var(--spacing-small);
+         vertical-align: middle;
+         position: relative;
+         top: -1px; /* Зберігаємо коригування */
+    }
+
+     .review-item {
+        padding: var(--spacing-medium);
+        margin-bottom: var(--spacing-small);
+         text-align: left;
+    }
+
+    .review-item h3,
+    .review-item p,
+    .review-item .match-pair,
+    .review-item .question-status {
+        text-align: left;
+    }
+
+
+    #score {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-large);
+         text-align: center;
+    }
+
+    /* Адаптивні стилі для Drag & Drop */
+     .match-list {
+         min-width: auto;
+          text-align: left;
+     }
+
+     .match-list.left li,
+     .match-list.right li {
+         text-align: left;
+         justify-content: flex-start;
+     }
+}

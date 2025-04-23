@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 250px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #list li {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #list li:last-child {
+            border-bottom: none;
+        }
+
+        #list li:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+    </ul>
+    <script src="script.js" defer></script>
+</body>
+</html>
