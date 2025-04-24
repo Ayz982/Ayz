@@ -60,7 +60,7 @@ const testTopics = [
     { id: 7, name: "7 Масиви. Методи масиву.", file: "questions/questions_7.json" },
     { id: 8, name: "8 Ітерація по масиву.", file: "questions/questions_8.json" },
     { id: 9, name: "9 Об’єкти.", file: "questions/questions_9.json" },
-    { id: 10, name: "10 Масив об'єктів.", file: "questions_10.json" },
+    { id: 10, name: "10 Масив об'єктів.", file: "questions/questions_10.json" },
     { id: 11, name: "11 Колбек функції. Перебираючі методи масивів.", file: "questions/questions_11.json" },
     { id: 12, name: "12 Об'єктна модель документа.", file: "questions/questions_12.json" },
     { id: 13, name: "13 Події.", file: "questions/questions_13.json" },
@@ -393,7 +393,7 @@ function showQuestion() {
      }
 
     const question = questions[currentQuestionIndex];
-    questionContainer.innerHTML = `<h2>Питання ${currentQuestionIndex + 1}: ${question.question}</h2>`;
+    questionContainer.innerHTML = `<h2>${question.question}</h2>`;
 
     // Clear previous immediate feedback message (if using a separate div) - not currently in HTML
      // const feedbackDiv = quizContainer.querySelector(".quiz-feedback");
