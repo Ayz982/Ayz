@@ -5,16 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестування</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
     <div class="admin-link">
-        <a href="parser.html">Admin</a>
+        <a href="admin/parser.html">Admin</a>
     </div>
     <div class="container">
         <h1>Тестування</h1>
         <p id="totalQuestionsInfo"></p>
+        <div id="quizOptions">
+            <h2>Виберіть тему тесту</h2>
+            <select id="topicSelect">
+                </select>
+            <h2>Налаштування тесту</h2>
+            <label for="timedQuizCheckbox">
+                <input type="checkbox" id="timedQuizCheckbox" checked> Тестування на час
+            </label>
+            <label for="showAnswersCheckbox">
+                <input type="checkbox" id="showAnswersCheckbox" checked> Показати відповіді після тесту
+            </label>
+        </div>
         <button id="startBtn">Почати тест</button>
 
         <div id="quizHeader" class="hidden">
@@ -45,7 +57,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

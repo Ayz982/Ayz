@@ -1,0 +1,24 @@
+// --- Test Topics Data ---
+const testTopics = [
+    { id: 1, name: "1 Базова термінологія JavaScript. Змінні та типи.", file: "questions/questions_1.json" },
+    { id: 2, name: "2 Рядки.", file: "questions/questions_2.json" },
+    { id: 3, name: "3 Оператори порівняння.", file: "questions/questions_3.json" },
+    { id: 4, name: "4 Функції.", file: "questions/questions_4.json" },
+    { id: 5, name: "5 Розгалуження і цикли.", file: "questions/questions_5.json" },
+    { id: 6, name: "6 Методи рядків.", file: "questions/questions_6.json" },
+    { id: 7, name: "7 Масиви. Методи масиву.", file: "questions/questions_7.json" },
+    { id: 8, name: "8 Ітерація по масиву.", file: "questions/questions_8.json" },
+    { id: 9, name: "9 Об’єкти.", file: "questions/questions_9.json" },
+    { id: 10, name: "10 Масив об'єктів.", file: "questions_10.json" },
+    { id: 11, name: "11 Колбек функції. Перебираючі методи масивів.", file: "questions/questions_11.json" },
+    { id: 12, name: "12 Об'єктна модель документа.", file: "questions/questions_12.json" },
+    { id: 13, name: "13 Події.", file: "questions/questions_13.json" },
+    { id: 14, name: "14 Інструменти веброзробки.", file: "questions/questions_14.json" },
+    { id: 15, name: "15 Модульність проєкту та коду.", file: "questions/questions_15.json" },
+    { id: 16, name: "16 Вебсховище.", file: "questions/questions_16.json" },
+    { id: 17, name: "17 Асинхронність коду.", file: "questions/questions_17.json" },
+    { id: 18, name: "18 Проміси.", file: "questions/questions_18.json" },
+    { id: 19, name: "19 Промісифікація.", file: "questions/questions_19.json" },
+    { id: 20, name: "20 Синтаксис async/await.", file: "questions/questions_20.json" },
+    { id: 21, name: "21 Підсумковий тест.", file: "questions/questions_21.json" }, // Added final test
+];

@@ -389,16 +389,15 @@ label:focus-within {
 /* Стилі для чекбоксів та радіокнопок */
 label input[type="checkbox"],
 label input[type="radio"] {
-    margin-right: var(--spacing-small);
     flex-shrink: 0;
     transform: scale(1.2);
     cursor: pointer;
     accent-color: var(--primary-color);
-    vertical-align: middle; /* Залишаємо як базове вирівнювання */
-
-    /* Додаткове точне коригування */
-    position: relative;
-    top: -1px; /* Зміщуємо трохи вгору */
+    display: flex; /* Використовуємо flexbox для вирівнювання чекбокса та тексту */
+    align-items: center; /* Вирівнювання по центру по вертикалі */
+    margin: var(--spacing-small) 0;
+    padding: var(--spacing-small); /* Невеликий відступ всередині лейбла */
+    margin-right: var(--spacing-small);
 }
 
 
@@ -749,6 +748,74 @@ select:focus {
      color: #999; /* Ще світліший колір для мітки часу */
 }
 
+#quizOptions {
+    margin-bottom: var(--spacing-large); /* Відступ перед кнопкою старту */
+    padding: var(--spacing-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+#quizOptions h2 {
+    text-align: left; /* Вирівнюємо заголовки по лівому краю в цьому блоці */
+    margin-top: 0;
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+
+#quizOptions select {
+    display: block; /* Робимо випадаючий список блочним елементом */
+    width: 100%; /* Розтягуємо на всю ширину контейнера */
+    padding: 10px;
+    margin-bottom: var(--spacing-large); /* Відступ після вибору теми */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    outline: none;
+    /* Прибираємо стандартні стрілочки браузера для select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Додаємо власну стрілочку (SVG base64) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4-3.6%203.6-5.4%207.9-5.4%2012.8V200.6c0%205%201.8%209.3%205.4%2012.9%203.6%203.6%207.9%205.3%2012.9%205.3h255.2c5%200%209.3-1.8%2012.9-5.3%203.6-3.6%205.3-7.9%205.3-12.9V82.2c0-5-1.8-9.3-5.3-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
+    padding-right: 30px; /* Додаємо відступ справа для стрілочки */
+}
+
+#quizOptions select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+
+#quizOptions label {
+    display: flex; /* Використовуємо flexbox для вирівнювання чекбокса та тексту */
+    align-items: center; /* Вирівнювання по центру по вертикалі */
+    margin: var(--spacing-small) 0;
+    padding: var(--spacing-small); /* Невеликий відступ всередині лейбла */
+    cursor: pointer;
+    font-size: 1rem;
+    border: none; /* Прибираємо рамку, яка була для відповідей */
+    background-color: transparent; /* Прибираємо фон */
+}
+
+#quizOptions label:hover {
+    background-color: #eee; /* Легкий фон при наведенні */
+}
+
+#quizOptions label input[type="checkbox"] {
+    margin-right: var(--spacing-small); /* Відступ між чекбоксом і текстом */
+    flex-shrink: 0; /* Запобігаємо стисканню чекбокса */
+    transform: scale(1.1); /* Трохи збільшуємо чекбокс */
+    accent-color: var(--primary-color); /* Колір чекбокса */
+}
 
 /* Медіа запити для адаптивного дизайну */
 @media (max-width: 768px) {

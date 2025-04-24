@@ -1,0 +1,833 @@
+[
+  {
+    "type": "choice",
+    "question": "У якому атрибуті тега script вказується шлях до файлу скрипта?",
+    "answers": [
+      "src",
+      "scr",
+      "defer"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Який індекс першого елемента рядка?",
+    "answers": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "input",
+    "question": "Яке розширення має файл, що містить JavaScript-код, який буде виконано на сторінці?",
+    "correct": "js"
+  },
+  {
+    "type": "multichoice",
+    "question": "Назвіть способи підключення скрипта JavaScript до HTML-сторінки:",
+    "answers": [
+      "вбудований скрипт через тег <script>;",
+      "зовнішній скрипт через тег <script>;",
+      "через тег <style>;",
+      "зовнішній скрипт через тег <link>."
+    ],
+    "correct": [
+      0,
+      1
+    ]
+  },
+  {
+    "type": "choice",
+    "question": "Яка властивість рядка містить значення її довжини?",
+    "answers": [
+      "size",
+      "length",
+      "width",
+      "chars"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що буде виведено в консоль під час виконання коду? console.log(\"false\" + null)",
+    "answers": [
+      "null",
+      "Помилка",
+      "Рядок “falsenull”",
+      "Рядок “false”"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Визнач, чи є помилка у прикладі коду: const username = \"Mango\"; username = \"Poly\";",
+    "answers": [
+      "так",
+      "ні"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Вибери той варіант імені змінної, що записаний у camelCase нотації.",
+    "answers": [
+      "userage",
+      "user_age",
+      "userAge",
+      "UserAge"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Яка директива активує суворий режим?",
+    "answers": [
+      "‘strict mode’",
+      "‘use strict’",
+      "‘safe mode’"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "За допомогою якого ключового слова оголошується змінна, якій не можна задати нове значення після її оголошення?",
+    "answers": [
+      "const",
+      "let"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "multichoice",
+    "question": "Вибери існуючі примітивні типи даних в мові JavaScript:",
+    "answers": [
+      "String",
+      "Char",
+      "Number",
+      "Float",
+      "Boolean"
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "type": "choice",
+    "question": "Якої помилки припустилися в цьому фрагменті коду під час оголошення змінної: username = \"Mango\"; console.log(username);",
+    "answers": [
+      "Неприпустиме ім'я змінної",
+      "Неприпустиме значення змінної",
+      "Не вистачає ключового слова const або let"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Який метод використовується для виведення інформації з коду в консоль інструментів розробника?",
+    "answers": [
+      "print()",
+      "output()",
+      "console.log()"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде фінальне значення змінної username? let username = \"Poly\"; username[3] = \"a\";",
+    "answers": [
+      "“Poly”",
+      "“Pola”",
+      "Буде помилка"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що буде виведено в консоль інструментів розробника після виконання коду? let username; console.log(username);",
+    "answers": [
+      "ReferenceError: username is not defined",
+      "null",
+      "undefined"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу typeof \"true\"?",
+    "answers": [
+      "String",
+      "Boolean",
+      "True"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? null || true",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "0"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? \"false\" && 0",
+    "answers": [
+      "true",
+      "false",
+      "null",
+      "0",
+      "\"false\""
+    ],
+    "correct": 3
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? Boolean(\"\")",
+    "answers": [
+      "true",
+      "false"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? null && true",
+    "answers": [
+      "true",
+      "false",
+      "null"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? \"Mango\" && \"Poly\"",
+    "answers": [
+      "true",
+      "false",
+      "“Mango”",
+      "“Poly”"
+    ],
+    "correct": 3
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? \"Mango\" || \"Poly\"",
+    "answers": [
+      "true",
+      "false",
+      "“Mango”",
+      "“Poly”"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? !0",
+    "answers": [
+      "true",
+      "false",
+      "1",
+      "0"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? !\"Poly\"",
+    "answers": [
+      "true",
+      "false",
+      "1",
+      "0",
+      "\"Poly\"",
+      "\"not Poly\""
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? Boolean(\"false\")",
+    "answers": [
+      "true",
+      "false"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде результат виразу? \"false\" || 0",
+    "answers": [
+      "true",
+      "false",
+      "\"false\"",
+      "0"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис літерала масиву",
+    "answers": [
+      "<>",
+      "[]",
+      "{}",
+      "()"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Який із наведених способів правильно створює масив у JavaScript?",
+    "answers": [
+      "let arr = \"apple\", \"banana\", \"orange\";",
+      "let arr = [\"apple\", \"banana\", \"orange\"];",
+      "let arr = array(\"apple\", \"banana\", \"orange\");",
+      "let arr = {\"apple\", \"banana\", \"orange\"};"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Який індекс першого елемента масиву?",
+    "answers": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис звернення до елемента масиву users з індексом 2",
+    "answers": [
+      "[2]users",
+      "users[2]",
+      "users.2"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що поверне наступний код? let fruits = [\"apple\", \"banana\", \"orange\"]; console.log(fruits[1]);",
+    "answers": [
+      "apple",
+      "undefined",
+      "banana",
+      "orange"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Як визначається індекс останнього елемента масиву?",
+    "answers": [
+      "Він завжди дорівнює значенню довжини масиву",
+      "Він завжди на одиницю менший за довжину масиву",
+      "Він завжди на одиницю більший за довжину масиву"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде фінальне значення змінної arr2? const arr1 = [1, 2, 3]; const arr2 = arr1; arr1[1] = 1; arr2[2] = 1;",
+    "answers": [
+      "[1, 2, 3]",
+      "[1, 1, 1]",
+      "[1, 1, 3]"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде значення змінної result? const arr1 = [1, 2, 3]; const arr2 = [1, 2, 3]; const result = arr1 === arr2;",
+    "answers": [
+      "true",
+      "false"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде значення змінної result? const array= [false]; const result = array ? \"A\" : \"B\";",
+    "answers": [
+      "true",
+      "false",
+      "\"А\"",
+      "\"В\""
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає метод indexOf, якщо елемент у масиві не знайдено?",
+    "answers": [
+      "false",
+      "-1",
+      "null"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що поверне наступний код? let numbers = [1, 2, 3, 4, 5]; console.log(numbers.length);",
+    "answers": [
+      "5",
+      "4",
+      "6",
+      "undefined"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що в коді використовується в умові для зупинки циклу під час ітерацій по масиву? const planets = [\"Earth\", \"Mars\", \"Venus\"]; for (let i = 0; i < planets.length; i += 1) { console.log(planets[i]); }",
+    "answers": [
+      "Значення довжини масиву",
+      "Значення елементів масиву"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Який метод додає новий елемент у кінець масиву?",
+    "answers": [
+      ".push()",
+      ".pop()",
+      ".shift()",
+      ".unshift()"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Який метод видаляє перший елемент масиву?",
+    "answers": [
+      ".push()",
+      ".pop()",
+      ".shift()",
+      ".unshift()"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає метод .join() у JavaScript?",
+    "answers": [
+      "Масив, де елементи з'єднані заданим роздільником.",
+      "Рядок, де елементи масиву з'єднані заданим роздільником.",
+      "Число, яке відповідає кількості елементів у масиві. Об'єкт з властивостями масиву.",
+      "Об'єкт з властивостями масиву."
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що поверне наступний код? let fruits = [\"apple\", \"banana\", \"orange\"]; console.log(fruits.join(\", \"));",
+    "answers": [
+      "\"apple, banana, orange\"",
+      "\"apple,banana,orange\"",
+      "[\"apple\", \"banana\", \"orange\"]",
+      "\"apple banana orange\""
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що відбудеться, якщо викликати .join() без аргументу?",
+    "answers": [
+      "Елементи будуть з'єднані пробілом.",
+      "Елементи будуть з'єднані через кому.",
+      "Елементи залишаться у вигляді масиву.",
+      "Буде викинута помилка."
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що поверне наступний код? let numbers = [1, 2, 3]; console.log(numbers.join(\"  -  \"));",
+    "answers": [
+      "\"1  -  2  -  3\"",
+      "\"1-2-3\"",
+      "\"[1, 2, 3]\"",
+      "\"1, 2, 3\""
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає метод includes?",
+    "answers": [
+      "Індекс елемента або -1",
+      "Значення елемента або undefined",
+      "Буль true або false"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Який метод об'єднує два або більше масивів в один?",
+    "answers": [
+      ".concat()",
+      ".join()",
+      ".map() .",
+      ".filter()"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Чи можна отримати доступ до лічильника в циклі for...of?",
+    "answers": [
+      "так",
+      "ні"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис імпорту змінної А під ім'ям В?",
+    "answers": [
+      "import B from \" ... \"",
+      "import { A to B } from \" ... \"",
+      "import { A as B } from \" ... \"",
+      "import A as B from \" ... \""
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис іменованого імпорту змінної username",
+    "answers": [
+      "import { username } from \" ... \"",
+      "import { anyName } from \" ... \"",
+      "import username from \" ... \""
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис експорту для замовчування для зміни імені користувача username default",
+    "answers": [
+      "export default username",
+      "export default",
+      "export username",
+      "export username default"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Вибери синтаксис імпорту простору імен усіх експортів модуля в об'єкт з ім'ям everything",
+    "answers": [
+      "import everything as * from \" ... \"",
+      "import * as everything from \" ... \"",
+      "import everything from \" ... \"",
+      "import * from \" ... \""
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що таке модуль в JS-проекті?",
+    "answers": [
+      "Будь-який JavaScript-файл проекту",
+      "Будь-який файл налаштування проєкту",
+      "Тільки файли залежностей проекту"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис імпорту за замовчуванням",
+    "answers": [
+      "from \" ... \" import anyName",
+      "import { anyName } from \" ... \"",
+      "import anyName",
+      "import anyName from \" ... \""
+    ],
+    "correct": 3
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис іменованого експорту змінної username",
+    "answers": [
+      "username export",
+      "export const username = \"Mango\"",
+      "export default username"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що робить функція setTimeout?",
+    "answers": [
+      "Викликає передану функцію",
+      "Планує в асинхронній черзі відкладений виклик функції через вказаний інтервал часу",
+      "Чекає зазначеного часу, перед тим як викликати функцію"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що станеться, якщо викликати setInterval з нульовим інтервалом? (setInterval(fn, 0))",
+    "answers": [
+      "Викинеться помилка",
+      "Функція буде викликатись з мінімально можливою затримкою",
+      "Функція буде викликатись безперервно без затримки",
+      "Функція виконається лише один раз"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що потрібно передати функції clear Timeout?",
+    "answers": [
+      "Посилання на функцію, яка була передана в setTimeout",
+      "Затримку, після якої буде зупинено таймер",
+      "Ідентифікатор таймера, який повернув виклик setTimeout"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Як виконується синхронний код?",
+    "answers": [
+      "По черзі, кілька інструкцій виконуються в міру можливості інтерпретатора",
+      "Паралельно, інструкції не чекають завершення поточної операції",
+      "Послідовно, кожна наступна інструкція чекає завершення поточно"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає функція setInterval?",
+    "answers": [
+      "Значення затримки до виклику функції",
+      "Посилання на відкладену функцію",
+      "Числовий ідентифікатор інтервалу",
+      "Нічого"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Що потрібно передати функції clearlnterval?",
+    "answers": [
+      "Ідентифікатор інтервалу, який повернув setInterval",
+      "Значення часу, через яке буде повторюватися інтервал",
+      "Посилання на функцію, яка була передана в setlnterval"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Скільки разів буде викликана функція fоо для setinterval(foo, 2000)?",
+    "answers": [
+      "Кожні 2 секунди",
+      "Один раз одразу і один раз через 2 секунди",
+      "Один раз через 2 секунди"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Який із варіантів коду зупинить виконання setTimeout? const timer = setTimeout(() => console.log(\"Hello\"), 5000);",
+    "answers": [
+      "timer = null;",
+      "clearTimeout(timer);",
+      "stop Timeout(timer);",
+      "clearInterval(timer);"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає виклик функції setTimeout?",
+    "answers": [
+      "Числовий ідентифікатор таймера",
+      "Нічого",
+      "Посилання на відкладену функцію",
+      "Значення затримки до виклику функції"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що бере асинхронний код у JavaScript?",
+    "answers": [
+      "Код, який може бути незалежною від основного потоку",
+      "Код, який працює тільки в браузері",
+      "Код, який виконується разом, інструкція за інструкцією",
+      "Код, який завжди виконується швидше за синхронний"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що отримує функція, яка передається аргументом у метод catch()?",
+    "answers": [
+      "Значення, з яким виконався проміс",
+      "Помилку, з якою виконався проміс"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "У який стан переходить проміс, що успішно виконався?",
+    "answers": [
+      "Pending",
+      "Fulfilled",
+      "Settled",
+      "Rejected"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Що отримує функція, яка передається аргументом у метод finally?",
+    "answers": [
+      "Нічого",
+      "Значення, з яким виконався проміс",
+      "Помилку, з якою виконався проміс"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Який метод промісу використовується для обробки його результату?",
+    "answers": [
+      "process",
+      "then",
+      "catch",
+      "execute"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Коли виконається колбек-функція, яка передається першим аргументом у метод then?",
+    "answers": [
+      "Після того, як проміс буде виконано успішно",
+      "Щойно проміс буде створено",
+      "Після того, як проміс буде виконано успішно або з помилкою",
+      "Після того, як проміс буде виконано з помилкою"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Чи виконається метод finally, якщо вже виконався метод then()?",
+    "answers": [
+      "ні",
+      "так"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "multichoice",
+    "question": "Вибери всі стани, які існують у промісу",
+    "answers": [
+      "Rejected",
+      "Success",
+      "Settled",
+      "Loading",
+      "Fulfilled",
+      "Pending"
+    ],
+    "correct": [
+      0,
+      4,
+      5
+    ]
+  },
+  {
+    "type": "choice",
+    "question": "Вибери правильний синтаксис створення промісу",
+    "answers": [
+      "const promise = Promise(new)",
+      "const promise = Promise(executor)",
+      "const promise = new Promise(executor)"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "Чи виконається метод catch, якщо проміс виконався без помилки?",
+    "answers": [
+      "ні",
+      "так"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає метод then()?",
+    "answers": [
+      "Проміс",
+      "undefined",
+      "Значення, яке поверне його колбек-функція"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що повертає виклик new Promise()?",
+    "answers": [
+      "undefined",
+      "Функцію",
+      "Об'єкт"
+    ],
+    "correct": 2
+  },
+  {
+    "type": "choice",
+    "question": "У якому стані спочатку перебуває проміс?",
+    "answers": [
+      "Fulfilled",
+      "Rejected",
+      "Settled",
+      "Pending"
+    ],
+    "correct": 3
+  },
+  {
+    "type": "choice",
+    "question": "Яким буде значення промісу, який поверне then()?",
+    "answers": [
+      "Завжди буде undefined",
+      "Значення, яке поверне його колбек-функція"
+    ],
+    "correct": 1
+  },
+  {
+    "type": "choice",
+    "question": "Коли виконається функція, яка передається аргументом у метод finally()?",
+    "answers": [
+      "Після того, як проміс буде виконано успішно або з помилкою",
+      "Щойно проміс буде створено",
+      "Після того, як проміс буде виконано з помилкою",
+      "Після того, як проміс буде виконано успішно"
+    ],
+    "correct": 0
+  },
+  {
+    "type": "choice",
+    "question": "Що таке проміс?",
+    "answers": [
+      "Об'єкт, що зберігає стан асинхронної операції",
+      "Об'єкт, що зберігає стан синхронної операції",
+      "Функція, яка повертає об'єкт",
+      "Функція, яка виконує асинхронну операцію"
+    ],
+    "correct": 0
+  }
+]
